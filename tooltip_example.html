@@ -26,7 +26,7 @@
                     <label for="LAST_name">Last name <span class="tp-wrapper">
                         <button class="tp-trigger btn btn-primary" aria-describedby="tp-container_1" type="button"><i class="fas fa-info-circle information-icon"></i></button>
                         <span id="tp-container_1" role="tooltip" class="tip tip-right">
-							This is where we would display details that are usually more technical and not often needed.  However those that do need them need them often. </span>
+				This is where we would display details that are usually more technical and not often needed.  However those that do need them need them often. </span>
                         </span>
                         <input id="LAST_name" name="LAST_name" type="text">
                     </label>
@@ -39,13 +39,11 @@
             </div>
         </div>
     </div>
-</div>
-	
 </form>
 <script>
 	document.onkeydown = function(evt) {
 		evt = evt || window.event;
-		if (evt.keyCode == 27) { // escape key
+		if (evt.keyCode == 27) { 
 			tooltip_buttons =  document.getElementsByClassName("tp-trigger");
 			for (let i = 0; i < tooltip_buttons.length; i++) {
 				tooltip_buttons[i].blur();
