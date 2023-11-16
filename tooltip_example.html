@@ -1,0 +1,57 @@
+<!DOCTYPE html><!DOCTYPE HTML>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Tooltip Example</title>
+<link href="https://test-webtools.webservices.illinois.edu//webservices/dist/assets/css/app.css?time=2023103111" rel="stylesheet">
+<script src="https://test-webtools.webservices.illinois.edu//webservices/js/foundation/fontawesome-all.js"></script>
+</head>
+<body>
+<form>
+    <div class="grid-container" role="main">
+        <div class="grid-x  align-center  margin-top-1">
+            <div class="large-6  cell">
+                <h1><span class="tab-name">Tooltip Example</span></h1>
+            </div>
+        </div>
+        <div class="grid-x  align-center margin-top-2">
+            <div class="large-6 cell">
+                <div>
+                    <label for="FIRST_name">First name
+                        <input id="FIRST_name" name="FIRST_name" type="text">
+                    </label>
+                </div>
+                <div>
+                    <label for="LAST_name">Last name <span class="tp-wrapper">
+                        <button class="tp-trigger btn btn-primary" aria-describedby="tp-container_1" type="button"><i class="fas fa-info-circle information-icon"></i></button>
+                        <span id="tp-container_1" role="tooltip" class="tip tip-right">
+							This is where we would display details that are usually more technical and not often needed.  However those that do need them need them often. </span>
+                        </span>
+                        <input id="LAST_name" name="LAST_name" type="text">
+                    </label>
+                </div>
+                <div>
+                    <label for="department">Department
+                        <input id="department" name="department" type="text">
+                    </label>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+	
+</form>
+<script>
+	document.onkeydown = function(evt) {
+		evt = evt || window.event;
+		if (evt.keyCode == 27) { // escape key
+			tooltip_buttons =  document.getElementsByClassName("tp-trigger");
+			for (let i = 0; i < tooltip_buttons.length; i++) {
+				tooltip_buttons[i].blur();
+			}
+		}
+	};
+</script>
+</body>
+</html>
